@@ -1,0 +1,145 @@
+/* --- BASE STYLES --- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* --- included comments throughout based on additonal course learning i have doen to change how i wanted ---*/
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #e6e9ed;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #a1c185 0%, #86a86a 100%);
+    color: #000;
+    padding: 25px 20px;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background: #333;
+    padding: 10px 0;
+}
+
+nav a {
+    color: #fff;
+    padding: 12px 18px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: #5a7d42;
+    border-radius: 4px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 25px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+/* --- CARD STYLING --- */
+.project-card {
+    background: #ffffff;
+    border-top: 4px solid #a1c185;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+/* --- LAYOUTS --- */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.vertical-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile-pic {
+    float: right;
+    margin-left: 30px;
+    max-width: 180px;
+    border-radius: 10px;
+}
+
+/* --- PRINT FIXES (Only active when printing) --- */
+@media print {
+    nav { display: none !important; } /* Hides nav bar on paper */
+    
+    header {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .profile-pic {
+        max-width: 150px !important; /* Forces headshot to stay small */
+        float: right !important;
+    }
+
+    .project-card {
+        page-break-inside: avoid !important; /* Stops cards from splitting across pages */
+        border: 1px solid #ccc !important;
+    }
+
+    body { background: white !important; }
+    .container { box-shadow: none !important; width: 100% !important; margin: 0 !important; }
+}
+
+/* --- PRINT OPTIMIZATION --- */
+@media print {
+    /* Prevents boxes from being split across two pages */
+    .project-card {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        margin-bottom: 20px !important;
+        display: block !important;
+    }
+
+    /* Reduces massive gaps and ensures the container fits the page */
+    .container {
+        margin: 0 !important;
+        padding: 10px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-shadow: none !important;
+    }
+
+    /* Hides the navigation bar on the PDF to save space */
+    nav {
+        display: none !important;
+    }
+
+    /* Forces the background colors to show up */
+    header, .project-card {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+}
+/*
