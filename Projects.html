@@ -1,30 +1,55 @@
-<section id="projects" class="projects-section">
-    <h2>Technical Projects</h2>
-    <div class="project-grid">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Technical Projects</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="skills.html">Technical Skills</a>
+        <a href="work.html">Examples of Work</a>
+        <a href="learning.html">Learning Log</a>
+        <a href="CertificatesAndAchievements.html">Certifications</a>
+        <a href="Projects.html">Projects</a>
+    </nav>
 
-        <!-- Project 1: Traffic Light Controller -->
-        <div class="project-card">
-            <h3>Intelligent Traffic Light Controller</h3>
-            <p class="tech-tags"><strong>C++ | Arduino | Hardware Networking | Mesh Topology</strong></p>
-            <p>Engineered an embedded node using Arduino and C++ to dynamically adjust to ambient light[cite: 3]. Implemented an Emergency Vehicle Pre-emption (EVP) protocol and designed a theoretical 10-node Small Area Network using a Mesh topology and static IPv4 addressing[cite: 3].</p>
-            
-            <div class="project-links" style="margin-top: 15px;">
-                <a href="https://github.com/toby07ald-sys/PersonalPortfolio" target="_blank" style="margin-right: 20px;"><strong>View Code (GitHub)</strong></a>
-                <a href="System_Technology_Report_pdf_version.pdf" target="_blank"><strong>View System Technology Report (PDF)</strong></a>
+    <div class="container">
+        <section id="projects" class="projects-section">
+            <div class="project-grid">
+
+                <!-- Project 1: Traffic Light Controller -->
+                <div class="project-card">
+                    <h3>Intelligent Traffic Light Controller</h3>
+                    <p class="tech-tags"><strong>C++ | Arduino | Hardware Networking | Mesh Topology</strong></p>
+                    <p>Engineered an embedded node using Arduino and C++ to dynamically adjust to ambient light. Implemented an Emergency Vehicle Pre-emption (EVP) protocol and designed a theoretical 10-node Small Area Network using a Mesh topology and static IPv4 addressing.</p>
+                    
+                    <div class="project-links" style="margin-top: 15px;">
+                        <a href="https://github.com/toby07ald-sys/PersonalPortfolio" target="_blank" style="margin-right: 20px;"><strong>View Code (GitHub)</strong></a>
+                        <a href="System_Technology_Report_pdf_version.pdf" target="_blank"><strong>View System Technology Report (PDF)</strong></a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Java Chat Server -->
+                <div class="project-card">
+                    <h3>Secure Multi-Threaded Chat Server</h3>
+                    <p class="tech-tags"><strong>Java | Socket Programming | Cryptography | Multi-Threading</strong></p>
+                    <p>Engineered a concurrent server-client chat architecture utilizing Java Sockets. Designed to handle simultaneous user connections through isolated client threads. Developed a custom Security Manager featuring password salting and irreversible hashing algorithms.</p>
+                    
+                    <div class="project-links" style="margin-top: 15px;">
+                        <a href="https://github.com/toby07ald-sys/PersonalPortfolio" target="_blank" style="margin-right: 20px;"><strong>View Code (GitHub)</strong></a>
+                        <a href="ChatServerReportPdf.pdf" target="_blank"><strong>View System Programming Report (PDF)</strong></a>
+                    </div>
+                </div>
+
             </div>
-        </div>
-
-        <!-- Project 2: Java Chat Server -->
-        <div class="project-card">
-            <h3>Secure Multi-Threaded Chat Server</h3>
-            <p class="tech-tags"><strong>Java | Socket Programming | Cryptography | Multi-Threading</strong></p>
-            <p>Engineered a concurrent server-client chat architecture utilizing Java Sockets. Features parallel messaging, SHA-256 password hashing with salt, and AES-128 encryption for all message payloads[cite: 4].</p>
-            
-            <div class="project-links" style="margin-top: 15px;">
-                <a href="https://github.com/toby07ald-sys/PersonalPortfolio" target="_blank" style="margin-right: 20px;"><strong>View Code (GitHub)</strong></a>
-                <a href="ChatServerReportPdf.pdf" target="_blank"><strong>View System Programming Report (PDF)</strong></a>
-            </div>
-        </div>
-
+        </section>
     </div>
-</section>
+</body>
+</html>
