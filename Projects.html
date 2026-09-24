@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Projects Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- <header>
-        <h1>Technical Projects</h1>
-    </header> -->
     <nav>
         <a href="index.html">Home</a>
         <a href="skills.html">Technical Skills</a>
@@ -21,64 +18,50 @@
     </nav>
 
     <div class="container">
-        <section id="projects" class="projects-section">
-            <div class="project-grid">
-
-                <!-- Project 1: Traffic Light Controller -->
-                <div class="project-card">
-                    <h3>Intelligent Traffic Light Controller</h3>
-                    <p class="tech-tags"><strong>C++ | Arduino | Hardware Networking | Mesh Topology</strong></p>
-                    <p>Engineered an embedded node using Arduino and C++ to dynamically adjust to ambient light. Implemented an Emergency Vehicle Pre-emption (EVP) protocol and designed a theoretical 10-node Small Area Network using a Mesh topology and static IPv4 addressing.</p>
-                    
-                    <div class="project-links" style="margin-top: 15px;">
-                        <a href="PFArdunioController.pdf" target="_blank"><strong>View Intelligent Traffic Light Controller Report (PDF)</strong></a>
-                    </div>
-                </div>
-
-                <!-- Project 2: Java Chat Server -->
-                <div class="project-card">
-                    <h3>Secure Java Multi-Threaded Chat Server</h3>
-                    <p class="tech-tags"><strong>Java | Socket Programming | Cryptography | Multi-Threading</strong></p>
-                    <p>Engineered a concurrent server-client chat architecture utilizing Java Sockets. Designed to handle simultaneous user connections through isolated client threads. Developed a custom Security Manager featuring password salting and irreversible hashing algorithms.</p>
-                    
-                    <div class="project-links" style="margin-top: 15px;">
-                        <a href="https://github.com/toby07ald-sys/Secure-Chat-Server-Public" target="_blank" style="margin-right: 20px;"><strong>View Source Code (GitHub)</strong></a>
-                        <a href="PFChatServerReport.pdf" target="_blank"><strong>View Chat Server Report (PDF)</strong></a>
-                    </div>
-                </div>
-
-                <!-- Project 3: NCTX Bus Ticketing System -->
-                <div class="project-card" id="nctx-bus">
-                <h3>NCTX Bus Ticketing System</h3>
-                <p><strong>Description:</strong> A robust console-based application simulating a real-world commercial transaction environment for a transport network.</p>
-                <p><strong>Technologies:</strong> Python, Object-Oriented Programming (OOP), CSV Database Management.</p>
-                <p><strong>Project Deep Dive:</strong>
-                    <ul>
-                        <li><strong>Object-Oriented Design:</strong> Implemented custom classes to manage ticket types and user profiles.</li>
-                        <li><strong>Backend Database:</strong> Built a secure authentication system to read and write data to a CSV database.</li>
-                        <li><strong>Data Integrity:</strong> Designed validation algorithms to handle age-restricted ticket sales and prevent invalid inputs.</li>
-                    </ul>
+        <h2>Technical Projects Portfolio</h2>
+        
+        <div class="vertical-stack">
+            
+            <div class="project-card" id="traffic-light">
+                <h3>Intelligent Traffic Light Controller</h3>
+                <p><strong>C++ | Arduino | Hardware Networking | Mesh Topology</strong></p>
+                <hr style="border: 0; border-top: 1px solid #eee; margin: 10px 0 15px 0;">
+                <p>Engineered an embedded node using Arduino and C++ to dynamically adjust to ambient light. Implemented an Emergency Vehicle Pre-emption protocol and designed a theoretical 10-node Small Area Network using a Mesh topology and static IPv4 addressing.</p>
+                <p style="margin-top: 15px;">
+                    <a href="TrafficLightReport.pdf" target="_blank">View Intelligent Traffic Light Controller Report (PDF)</a>
                 </p>
-                <p><strong>Context:</strong> University Coursework (Year 1).</p>
-                <a href="#" class="btn" target="_blank">View Repository</a>
+            </div>
 
-                <div class="project-card" id="hash-cracker">
+            <div class="project-card" id="java-chat">
+                <h3>Secure Multi-Threaded Chat Server</h3>
+                <p><strong>Java | Socket Programming | Cryptography | Multi-Threading</strong></p>
+                <hr style="border: 0; border-top: 1px solid #eee; margin: 10px 0 15px 0;">
+                <p>Engineered a concurrent server-client chat architecture utilizing Java Sockets. Designed to handle simultaneous user connections through isolated client threads. Developed a custom Security Manager featuring password salting and irreversible hashing algorithms.</p>
+                <p style="margin-top: 15px;">
+                    <a href="#" target="_blank">View Source Code (GitHub)</a> &nbsp;|&nbsp; 
+                    <a href="ChatServerReport.pdf" target="_blank">View Chat Server Report (PDF)</a>
+                </p>
+            </div>
+
+            <div class="project-card" id="hash-cracker">
                 <h3>Python SHA-256 Hash Cracker</h3>
-                <p><strong>Description:</strong> A dictionary-based password cracking tool designed to test the vulnerability of unsalted cryptographic hashes.</p>
-                <p><strong>Technologies:</strong> Python, Hashlib, File Handling.</p>
-                <p><strong>Project Deep Dive:</strong>
-                    <ul>
-                        <li><strong>Dictionary Attack Implementation:</strong> Built a mechanism utilizing the RockYou wordlist to systematically brute-force hashed credentials.</li>
-                        <li><strong>Cryptographic Integration:</strong> Utilized Python's built-in hashlib library to generate and compare SHA-256 hashes efficiently.</li>
-                        <li><strong>Security Application:</strong> Developed strictly as an educational tool to demonstrate the critical importance of salting passwords in secure database management.</li>
-                    </ul>
+                <p><strong>Python | Hashlib | File Handling | Cryptography</strong></p>
+                <hr style="border: 0; border-top: 1px solid #eee; margin: 10px 0 15px 0;">
+                <p>Designed a dictionary-based password cracking tool to test the vulnerability of unsalted cryptographic hashes. Implemented a dictionary attack mechanism utilizing the RockYou wordlist and Python's built-in hashlib library to demonstrate the importance of secure password salting.</p>
+                <p style="margin-top: 15px;">
+                    <a href="#" target="_blank">View Source Code (GitHub)</a>
                 </p>
-                <p><strong>Context:</strong> Independent Cyber Security Portfolio Project.</p>
-                <a href="#" class="btn" target="_blank">View Repository</a>
             </div>
 
+            <div class="project-card" id="nctx-bus">
+                <h3>NCTX Bus Ticketing System</h3>
+                <p><strong>Python | OOP | Data Management</strong></p>
+                <hr style="border: 0; border-top: 1px solid #eee; margin: 10px 0 15px 0;">
+                <p>Developed a complete software solution handling complex user interactions for ticket selection. Built from scratch utilizing Object-Oriented Programming classes and comprehensive CSV file management to securely handle backend data.</p>
+                <p style="margin-top: 15px; color: #666;">Source code coming soon.</p>
             </div>
-        </section>
+
+        </div>
     </div>
 </body>
 </html>
